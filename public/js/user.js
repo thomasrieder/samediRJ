@@ -96,7 +96,7 @@ socket.on('updateVideo', function(vTime){
 var color = "yellow";
 var speed = 500;
 var randColor = ['#fdcb6e', '#ff7675', '#00b894', '#0984e3'];
-var actionTime = [20.93, 36.53, 60, 65, 112.95, 114.25, 115.55, 116.86, 118.16, 119.47, 120.77, 122.07, 249];
+var actionTime = [20.93, 36.53, 60, 65, 112.95, 114.25, 115.55, 116.86, 118.16, 119.47, 120.77, 122.07, 240.19];
 var canPlay = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 var step = 0;
 
@@ -108,7 +108,6 @@ var step = 0;
  * toggleRandomBlink -> start/stop color blink
  * setGame -> users have to change color
  * timeAnim square
- * 0.6521739130434783
  */
 
 function startLive(){
@@ -286,7 +285,7 @@ function toggleRandomBlink(){
 
     $('.live').css({
         'opacity': '1',
-        'transition': 'background-color 400ms'
+        'transition': 'background-color 300ms'
     });
 
     if(isRandomBlink == 0){
@@ -374,8 +373,6 @@ function squareAnim(squareColor){
 }
 
 function doSquareAnim(squareColor){
-
-    console.log(squareColor);
 
     if(x % 3 == 0 && x != 0){
         y++;
